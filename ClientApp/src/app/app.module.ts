@@ -13,6 +13,9 @@ import { HealthCheckComponent} from './health-check/health-check.component'
 /*import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 */
+
+import { DragModalDirective } from './directives/DragModalDirective';
+import {  NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     contactsScreen,
     newContactModal,
     HealthCheckComponent,
+    DragModalDirective,
 /*    CounterComponent,
     FetchDataComponent
 */  ],
@@ -31,12 +35,13 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     RouterModule.forRoot([
       { path: '', component: login, pathMatch: 'full' },
       { path: 'mainpage', component: contactsScreen },
-      { path: 'modal', component: newContactModal },
+      /*{ path: 'modal', component: newContactModal },*/
       { path: 'health-check', component: HealthCheckComponent },
 
   /*    { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-  */  ])
+  */  ]),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

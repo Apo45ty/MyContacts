@@ -8,9 +8,9 @@
           <form>
             <div class="form-group">
               <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" placeholder="Username">
+              <input type="text" class="form-control" id="username" #box placeholder="Username">
             </div>
-            <button type="submit" class="btn btn-primary" (click)="login($event)">Enter</button>
+            <button type="submit" class="btn btn-primary" (click)="login($event,box.value)">Enter</button>
           </form>
         </div>
       </div>
